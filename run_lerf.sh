@@ -1,19 +1,30 @@
 #!/usr/bin/env bash
 
-# We need to first specify the dataset location
-dataset_path="/data/lerf_ovs/dataset"
-eval_path="/data/lerf_ovs/label"
-output_path="rendered_result"
+# Prompt user for dataset path
+read -p "Enter dataset path [default: ./datasets/lerf_ovs/dataset]: " dataset_path
+dataset_path=${dataset_path:-./datasets/lerf_ovs/dataset}
+
+# Prompt user for evaluation path
+read -p "Enter eval path [default: ./datasets/lerf_ovs/label]: " eval_path
+eval_path=${eval_path:-./datasets/lerf_ovs/label}
+
+# Prompt user for output path
+read -p "Enter output path [default: ./evaluation/rendered_result]: " output_path
+output_path=${output_path:-./evaluation/rendered_result}
+
+# Print results
+echo "Using dataset path: $dataset_path"
+echo "Using eval path: $eval_path"
+echo "Using output path: $output_path"
 
 # We need to prepare our feature data
 
 
 
-#cd FeatUp
 #for dir in "$dataset_path"/*; do
 #  if [ -d "$dir" ]; then
 #    echo "Processing directory: $dir"
-#    python featup.py --image_folder "$dir/images" --output_feature_folder "$dir/features"
+#    python featup_encoder.py --image_folder "$dir/images" --output_feature_folder "$dir/features"
 #    # Create 'colmap' folder if it doesn't exist (optional)
 #    # mkdir -p "$dir/colmap"
 #  fi
@@ -52,8 +63,6 @@ output_path="rendered_result"
 #  fi
 #done
 
-cd evaluation
-
 for dir in "$dataset_path"/*; do
   if [ -d "$dir" ]; then
     echo "Processing directory: $dir"
@@ -72,5 +81,3 @@ for dir in "$dataset_path"/*; do
 
   fi
 done
-
-cd ..

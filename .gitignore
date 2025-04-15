@@ -2,4 +2,6 @@
 /arxiv/
 /evaluation/rendered_result/
 /evaluation/output/
-/__pycache__/
+yolo11n.pt
+evaluation/output_back/
+evaluation/__pycache__/

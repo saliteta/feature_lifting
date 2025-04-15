@@ -268,7 +268,8 @@ class lerf_evaluator(base_evaluator):
                 mode = 'Feature',
                 H = H, W = W
             )
-            C = img.shape[-1]
+
+            H,W,C = img.shape
             feature = img.reshape((-1, C))
             feature = F.normalize(feature, dim=1)
             feature = feature.reshape((H,W,C)).detach().cpu()
