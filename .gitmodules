@@ -1,0 +1,9 @@
+[submodule "submodules/gs_loader"]
+	path = submodules/gs_loader
+	url = https://github.com/saliteta/gs_loader.git
+[submodule "submodules/feature_viewer"]
+	path = submodules/feature_viewer
+	url = https://github.com/kennethxu922/opengs_vis.git
+[submodule "submodules/gsplat_ext"]
+	path = submodules/gsplat_ext
+	url = https://github.com/saliteta/feature_lift.git
