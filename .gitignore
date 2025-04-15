@@ -1,10 +1,9 @@
-.vscode
+/.vscode
 /arxiv
 /evaluation/rendered_result
 /evaluation/output
-/evaluation/output/__pycache__
+/evaluation/output/
 /__pycache__
 /submodules/feature_viewer
 /submodules/gs_loader
 /submodules/gsplat_ext
-
